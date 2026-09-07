@@ -117,14 +117,15 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','
 .contact-row span:first-child{color:var(--ink-soft)}
 .contact-row span:last-child{font-weight:700;font-variant-numeric:tabular-nums}
 
-.more-catalog-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:32px;padding:24px 28px;background:#FFC900;border:2px solid #E0A800;border-radius:18px;text-decoration:none;box-shadow:0 6px 20px rgba(224,168,0,0.35);transition:transform .15s ease,box-shadow .15s ease}
-.more-catalog-banner:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(224,168,0,0.45)}
-.more-catalog-banner .mcb-text{color:var(--primary-deep);font-size:15.5px;line-height:1.6}
-.more-catalog-banner .mcb-text b{font-size:20px;display:block;margin-bottom:2px}
-.more-catalog-banner .mcb-arrow{color:#FFFFFF;background:var(--primary-deep);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
+.more-catalog-banner{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:32px;padding:24px 28px;background:var(--primary);border-radius:18px;text-decoration:none;box-shadow:var(--shadow);transition:transform .15s ease,box-shadow .15s ease}
+.more-catalog-banner:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(29,54,32,0.35)}
+.more-catalog-banner .mcb-text{color:#FFFFFF;font-size:15.5px;line-height:1.6}
+.more-catalog-banner .mcb-text b{font-size:16.5px;display:block;margin-bottom:2px;color:#FFFFFF}
+.more-catalog-banner .mcb-highlight{color:#FFD400;font-weight:900;font-size:19px}
+.more-catalog-banner .mcb-arrow{color:var(--primary-deep);background:#FFD400;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:900;flex-shrink:0}
 @media(max-width:480px){
   .more-catalog-banner{flex-direction:column;text-align:center;padding:22px 20px}
-  .more-catalog-banner .mcb-text b{font-size:18px}
+  .more-catalog-banner .mcb-highlight{font-size:18px}
 }
 
 .feature-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -206,7 +207,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','
     </div>
     <div class="catalog" id="catalog"></div>
     <a class="more-catalog-banner" href="https://ecoop.or.kr/DureShop/g/chuseok26/index.html" target="_blank" rel="noopener">
-      <span class="mcb-text"><b>더 다양한 두레 추석 선물세트가 궁금하신가요?</b><br>두레생협 2026 추석 선물세트 전체 카탈로그 보러가기</span>
+      <span class="mcb-text"><b>더 다양한 두레 추석 선물세트가 궁금하신가요?</b><br>두레생협 2026 추석 선물세트 전체 <span class="mcb-highlight">카탈로그 보러가기</span></span>
       <span class="mcb-arrow">→</span>
     </a>
   </div>
