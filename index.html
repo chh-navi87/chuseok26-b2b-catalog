@@ -84,7 +84,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','
 .catalog-grid{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
 @media(min-width:620px){.catalog-grid{grid-template-columns:1fr 1fr}}
 .pcard{position:relative;background:var(--surface);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
-.pcard.featured{border:3px solid var(--gold);box-shadow:0 8px 24px rgba(168,123,30,0.4)}
+.pcard.featured{border:3px solid var(--wine);box-shadow:0 8px 24px rgba(122,46,46,0.4)}
 .pcard .pcrown{
   position:absolute;top:10px;left:10px;z-index:3;
   background:var(--primary-deep);border-radius:50%;width:38px;height:38px;
@@ -259,7 +259,7 @@ function renderCard(p) {
   return `
   <div class="pcard${p.badge ? ' featured' : ''}">
     <div class="pimgwrap">
-      ${p.badge ? `<span class="pcrown"><svg viewBox="0 0 24 24" width="28" height="28" fill="var(--gold)" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round"><path d="M3 8.5l3.6 2.6L12 4l5.4 7.1L21 8.5l-1.8 9.5H4.8L3 8.5z"/><circle cx="3" cy="8.5" r="1.4" fill="var(--gold)"/><circle cx="12" cy="4" r="1.4" fill="var(--gold)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--gold)"/></svg></span>` : `<span class="pnum">${String(p.n).padStart(2,'0')}</span>`}
+      ${p.badge ? `<span class="pcrown"><svg viewBox="0 0 24 24" width="28" height="28" fill="var(--wine)" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round"><path d="M3 8.5l3.6 2.6L12 4l5.4 7.1L21 8.5l-1.8 9.5H4.8L3 8.5z"/><circle cx="3" cy="8.5" r="1.4" fill="var(--wine)"/><circle cx="12" cy="4" r="1.4" fill="var(--wine)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--wine)"/></svg></span>` : `<span class="pnum">${String(p.n).padStart(2,'0')}</span>`}
       ${p.badge ? `<span class="pbadge">${p.badge}</span>` : ''}
       <img src="${p.img}" alt="${p.name}">
     </div>
