@@ -259,7 +259,7 @@ function renderCard(p) {
     const regNum = Number(p.priceRegular.replace(/[^\d]/g, ''));
     const saleNum = Number(p.price.replace(/[^\d]/g, ''));
     const pct = Math.round((1 - saleNum / regNum) * 100);
-    priceHtml = `<span class="pold">${p.priceRegular}</span><span class="pnow">${p.price}</span><span class="ppct">얼리버드 ${pct}%</span>`;
+    priceHtml = `<span class="pold">${p.priceRegular}</span><span class="ppct">얼리버드 ${pct}% 할인가</span><span class="pnow">${p.price}</span>`;
   } else {
     priceHtml = `<span class="pnow">${p.price}</span>${p.priceSuffix ? '<span class="suffix">'+p.priceSuffix+'</span>' : ''}`;
   }
