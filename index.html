@@ -87,9 +87,9 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR','
 .pcard.featured{border:3px solid var(--wine);box-shadow:0 8px 24px rgba(122,46,46,0.4)}
 .pcard .pcrown{
   position:absolute;top:10px;left:10px;z-index:3;
-  background:linear-gradient(145deg,#F3D078,#B8860B);border:2px solid #FFF8E7;border-radius:50%;width:40px;height:40px;
+  background:var(--wine);border:2px solid var(--gold);border-radius:50%;width:40px;height:40px;
   display:flex;align-items:center;justify-content:center;
-  box-shadow:0 3px 10px rgba(122,46,46,0.4);pointer-events:none;
+  box-shadow:0 3px 10px rgba(0,0,0,0.3);pointer-events:none;
 }
 .pcard .pcrown svg{display:block}
 .pcard .pnum{position:absolute;margin:12px;background:var(--primary-deep);color:#F1E3BE;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;font-family:'Noto Serif KR',serif}
@@ -259,7 +259,7 @@ function renderCard(p) {
   return `
   <div class="pcard${p.badge ? ' featured' : ''}">
     <div class="pimgwrap">
-      ${p.badge ? `<span class="pcrown"><svg viewBox="0 0 24 24" width="28" height="28" fill="var(--wine)" stroke="#FFFFFF" stroke-width="0.8" stroke-linejoin="round"><path d="M3 8.5l3.6 2.6L12 4l5.4 7.1L21 8.5l-1.8 9.5H4.8L3 8.5z"/><circle cx="3" cy="8.5" r="1.4" fill="var(--wine)"/><circle cx="12" cy="4" r="1.4" fill="var(--wine)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--wine)"/></svg></span>` : `<span class="pnum">${String(p.n).padStart(2,'0')}</span>`}
+      ${p.badge ? `<span class="pcrown"><svg viewBox="0 0 24 24" width="26" height="26" fill="var(--gold)" stroke="#FFF8E7" stroke-width="0.6" stroke-linejoin="round"><path d="M3 8.5l3.6 2.6L12 4l5.4 7.1L21 8.5l-1.8 9.5H4.8L3 8.5z"/><circle cx="3" cy="8.5" r="1.4" fill="var(--gold)"/><circle cx="12" cy="4" r="1.4" fill="var(--gold)"/><circle cx="21" cy="8.5" r="1.4" fill="var(--gold)"/></svg></span>` : `<span class="pnum">${String(p.n).padStart(2,'0')}</span>`}
       ${p.badge ? `<span class="pbadge">${p.badge}</span>` : ''}
       <img src="${p.img}" alt="${p.name}">
     </div>
